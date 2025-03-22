@@ -12,7 +12,7 @@
 ~h
 # Command Line History (newest to oldest):
 :wq
-|2,0,1742654267,,"wq"
+|2,0,1742654579,,"wq"
 
 # Search String History (newest to oldest):
 
@@ -25,32 +25,36 @@
 # Registers:
 
 # File marks:
-'0  5  69  ~/index.html
-|4,48,5,69,1742654267,"~/index.html"
-'1  5  0  ~/index.html
-|4,49,5,0,1742654115,"~/index.html"
-'2  4  24  ~/index.html
-|4,50,4,24,1742654011,"~/index.html"
-'3  4  24  ~/index.html
-|4,51,4,24,1742654011,"~/index.html"
+'0  5  63  ~/index.html
+|4,48,5,63,1742654579,"~/index.html"
+'1  5  69  ~/index.html
+|4,49,5,69,1742654267,"~/index.html"
+'2  5  0  ~/index.html
+|4,50,5,0,1742654115,"~/index.html"
+'3  5  0  ~/index.html
+|4,51,5,0,1742654115,"~/index.html"
 '4  4  24  ~/index.html
 |4,52,4,24,1742654011,"~/index.html"
 '5  4  24  ~/index.html
 |4,53,4,24,1742654011,"~/index.html"
-'6  4  0  ~/index.html
-|4,54,4,0,1742653766,"~/index.html"
-'7  4  0  ~/index.html
-|4,55,4,0,1742653766,"~/index.html"
-'8  4  0  ~/index.html
-|4,56,4,0,1742653766,"~/index.html"
-'9  4  0  ~/index.html
-|4,57,4,0,1742653766,"~/index.html"
+'6  4  24  ~/index.html
+|4,54,4,24,1742654011,"~/index.html"
+'7  4  24  ~/index.html
+|4,55,4,24,1742654011,"~/index.html"
+'8  4  24  ~/index.html
+|4,56,4,24,1742654011,"~/index.html"
+'9  4  24  ~/index.html
+|4,57,4,24,1742654011,"~/index.html"
 
 # Jumplist (newest first):
+-'  5  63  ~/index.html
+|4,39,5,63,1742654579,"~/index.html"
 -'  5  69  ~/index.html
 |4,39,5,69,1742654267,"~/index.html"
 -'  5  0  ~/index.html
 |4,39,5,0,1742654115,"~/index.html"
+-'  4  24  ~/index.html
+|4,39,4,24,1742654088,"~/index.html"
 -'  4  24  ~/index.html
 |4,39,4,24,1742654088,"~/index.html"
 -'  4  24  ~/index.html
@@ -67,6 +71,10 @@
 |4,39,3,57,1742653761,"~/index.html"
 -'  3  57  ~/index.html
 |4,39,3,57,1742653761,"~/index.html"
+-'  3  57  ~/index.html
+|4,39,3,57,1742653761,"~/index.html"
+-'  2  64  ~/index.html
+|4,39,2,64,1742653733,"~/index.html"
 -'  2  64  ~/index.html
 |4,39,2,64,1742653733,"~/index.html"
 -'  2  64  ~/index.html
@@ -87,16 +95,18 @@
 |4,39,1,0,1742651837,"~/index.html"
 -'  1  0  ~/index.html
 |4,39,1,0,1742651837,"~/index.html"
+-'  1  0  ~/index.html
+|4,39,1,0,1742651837,"~/index.html"
 
 # History of marks within files (newest to oldest):
 
 > ~/index.html
-	*	1742654266	0
-	"	5	69
-	^	5	70
-	.	5	69
+	*	1742654578	0
+	"	5	63
+	^	5	64
+	.	5	64
 	+	2	65
 	+	3	65
 	+	3	57
 	+	4	56
-	+	5	69
+	+	5	64
