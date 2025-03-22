@@ -1,0 +1,66 @@
+pipeline {
+    agent any
+    parameters {
+        string(name: 'docker_image_create', defaultValue:'kandimallanikhil/docker:v1',description: 'name of the docker docker image')
+        string(name: 'docker_container_create', defaultValue:"test_docker",description : 'container_run')
+    }
+
+    stages {
+        stage('Clean Workspace') {
+            steps {
+                cleanWs()  // This will clean the workspace
+            }
+        }
+        stage('git_hub') {
+            steps {
+               git 'https://github.com/kandimallanikhil/containers.git'
+            }
+        }
+        stage ('docker_image'){
+            steps {
+                    sh "docker build -t ${params.docker_image_create} ."                                                                                     
+            }
+        }
+        stage ('docker_image_push'){
+            steps {
+                script {
+                    withDockerRegistry(credentialsId: 'docker') {
+                        sh "docker build -t ${params.docker_image_create} ."
+                        sh "docker push ${params.docker_image_create}"
+                    }
+                }                                                                          
+            }
+        }
+        
+        stage ('docker_image_delete'){
+            steps {
+                script {
+                    sh "docker rmi -f ${params.docker_image_create}"
+                }
+            }                                                                          
+        }
+         stage('docker_container_delete') {
+            steps {
+                script {
+                    // Get the previous build number
+                    def previousBuildNumber = currentBuild.previousBuild?.number
+                    if (previousBuildNumber) {
+                        // Delete the previous container if it exists
+                        sh "docker rm -f ${params.docker_container_create}_${previousBuildNumber} || true"
+                    } else {
+                        echo "No previous build, skipping container cleanup."
+                    }
+                }
+            }
+        }
+        stage('docker_container_run'){
+            steps {
+                script {
+                       
+                        sh "docker run -d --name ${params.docker_container_create}_${env.BUILD_NUMBER} -p 80:80 ${params.docker_image_create}"
+                    
+                }
+            }
+        }
+    }
+}
